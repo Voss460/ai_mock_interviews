@@ -29,12 +29,12 @@ export async function POST(request: Request) {
 
         const interview={
             role, type, level,
-            techstacl: techstack.split(','),
+            techstack: techstack.split(','),
             questions: JSON.parse(questions),
             userId: userid, 
             finalized: true,
             coverImage: getRandomInterviewCover(),
-            createAt: new Date().toISOString()
+            createdAt: new Date().toISOString()
         }
         await db.collection("interviews").add(interview);
 
