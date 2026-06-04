@@ -71,3 +71,7 @@ interface GetLatestInterviewsParams {
   userId: string;
   limit?: number;
 }
+
+interface RouteParams {
+  params: Promise<{ id: string }>;
+}
